@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="196dde04-c1b4-478c-8e96-ec5aed351ef9" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="mule-sample-projectFlow" doc:id="4b6fc55e-a23f-4648-879f-142a6e29f797" >
+		<http:listener doc:name="Listener" doc:id="22d638a1-6c88-4dbd-9a38-8b6e5dc430cd" config-ref="HTTP_Listener_config" path="/test-app"/>
+		<logger level="INFO" doc:name="Test App Started" doc:id="7907d1a3-5adb-4784-adf6-4e2223d89b9b" message="Test App Started"/>
+		<set-payload value='#["CICD Implementation Test Using Git Actions"]' doc:name="Set Payload" doc:id="afefbb03-29a1-4fb7-87e0-ebfa07203800" />
+		<logger level="INFO" doc:name="Test App Ended" doc:id="1a45772f-1788-49bd-813e-f51eea9d73a2" message="Test App Ended"/>
+	</flow>
+	<sub-flow name="mule-sample-projectSub_Flow" doc:id="a282f636-a977-4961-a8f7-ba9e14af297d" >
+		<set-payload value='#["CICD Implementation Test Using Git Actions"]' doc:name="Set Payload" doc:id="0c2478b9-a224-45da-93a5-f565b8328005" />
+	</sub-flow>
+</mule>
