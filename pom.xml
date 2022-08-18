@@ -64,8 +64,13 @@
 				<configuration>
 					<coverage>
 						<runCoverage>true</runCoverage>
+						<requiredApplicationCoverage>80</requiredApplicationCoverage>
+						<requiredResourceCoverage>80</requiredResourceCoverage>
+						<requiredFlowCoverage>50</requiredFlowCoverage>
 						<formats>
 							<format>html</format>
+							<format>console</format>
+							<format>json</format>
 						</formats>
 					</coverage>
 				</configuration>
