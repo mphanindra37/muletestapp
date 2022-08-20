@@ -64,10 +64,10 @@
 				<configuration>
 					<coverage>
 						<runCoverage>true</runCoverage>
-						<requiredApplicationCoverage>90</requiredApplicationCoverage>
-						<requiredResourceCoverage>90</requiredResourceCoverage>
-						<requiredFlowCoverage>90</requiredFlowCoverage>
 						<failBuild>true</failBuild>
+						<requiredApplicationCoverage>100</requiredApplicationCoverage>
+						<requiredResourceCoverage>100</requiredResourceCoverage>
+						<requiredFlowCoverage>100</requiredFlowCoverage>
 						<formats>
 							<format>html</format>
 							<format>console</format>
