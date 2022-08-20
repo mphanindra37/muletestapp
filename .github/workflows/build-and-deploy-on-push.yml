@@ -77,19 +77,8 @@ jobs:
         clientSecret: ${{ secrets.CLIENT_SECRET }}
       run: |
         artifactName=$(ls *.jar | head -1)
-        mvn deploy -DmuleDeploy \
+        mvn deploy -DmulePackage \
          -Dmule.artifact=$artifactName \
          -DclientId="$clientId" \
          -DclientSecret="$clientSecret"
-  coverage:
-    permissions:
-        checks: write
-        pull-requests: write
-        contents: write
-    runs-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@v1
-        - uses: ArtiomTr/jest-coverage-report-action@v2
-        with:
-            github-token: ${{ secrets.SECRET_TOKEN }}
             
