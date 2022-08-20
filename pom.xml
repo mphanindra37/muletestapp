@@ -62,7 +62,6 @@
 					</execution>
 				</executions>
 				<configuration>
-					<runtimeProduct>MULE_EE</runtimeProduct>
 					<coverage>
 						<runCoverage>true</runCoverage>
 						<failBuild>true</failBuild>
