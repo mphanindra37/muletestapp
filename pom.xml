@@ -64,9 +64,9 @@
 				<configuration>
 					<coverage>
 						<runCoverage>true</runCoverage>
-						<requiredApplicationCoverage>80</requiredApplicationCoverage>
-						<requiredResourceCoverage>80</requiredResourceCoverage>
-						<requiredFlowCoverage>50</requiredFlowCoverage>
+						<requiredApplicationCoverage>90</requiredApplicationCoverage>
+						<requiredResourceCoverage>90</requiredResourceCoverage>
+						<requiredFlowCoverage>90</requiredFlowCoverage>
 						<failBuild>true</failBuild>
 						<formats>
 							<format>html</format>
