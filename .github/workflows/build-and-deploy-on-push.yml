@@ -73,12 +73,12 @@ jobs:
     
     - name: Deploy to Sandbox
       env:
-        clientId: ${{ secrets.CLIENT_ID }}
-        clientSecret: ${{ secrets.CLIENT_SECRET }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
          -Dmule.artifact=$artifactName \
-         -DclientId="$clientId" \
-         -DclientSecret="$clientSecret"
+         -Danypoint.username="$USERNAME" \
+         -Danypoint.password="$PASSWORD"
             
