@@ -13,6 +13,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<set-payload value='#["CICD Implementation Test Using Git Actions"]' doc:name="Set Payload" doc:id="afefbb03-29a1-4fb7-87e0-ebfa07203800" />
 		<logger level="INFO" doc:name="Test App Ended" doc:id="1a45772f-1788-49bd-813e-f51eea9d73a2" message="Test App Ended"/>
 	</flow>
+	
 	<sub-flow name="mule-sample-projectSub_Flow" doc:id="a282f636-a977-4961-a8f7-ba9e14af297d" >
 		<set-payload value='#["CICD Implementation Test Using Git Actions"]' doc:name="Set Payload" doc:id="0c2478b9-a224-45da-93a5-f565b8328005" />
 	</sub-flow>
